@@ -15,6 +15,7 @@
   <h3>Заголовок поменбше</h3>
   <h6>Совсем маленький заголовок</h6>
   <hr>
+
   <h3 id="pageTop">Начало</h3>
 
   <div align='center'>
@@ -38,11 +39,12 @@
 
   <blockquote>дима котик - это как кот, он любит тебя, <sub>но когда ты ему надоедаешь он тебя бьет!</sub></blockquote>
 
-  <p>имя самого классного-сасного мальчика &hearts;:</p>
-  <ul>
+  <a href="#song">перейти к песенке</a>
+
+  <p><strong>имя самого классного-сасного мальчика &hearts;:</strong></p>
+  <ul type="square">
     <li>дима</li>
     <li>димочка</li>
-    <li>димасик</li>
     <li>дмитрий</li>
   </ul>
 
@@ -52,13 +54,14 @@
   <br><a href="https://vk.com/dychikxixixi" target="_blank">страничка вк</a>
   <hr>
 
-  <a href="page2.html">тык</a><br>
+  <a id="refs"></a>
+  <a href="page2.html" title="жмякай, это бесплатно">тык</a><br>
   <a href="img/kumaPls.gif" target="_blank">а сюда тык</a><br>
   <a href="page3.html">то же, но страничка</a><br>
 
 
   <br>
-  <table border="1">
+  <table border="1" width="30%" cellpadding="5">
     <thead>
       <tr>
         <th>котики</th>
@@ -94,6 +97,7 @@
 
   <br><img src="img/HACKERMANS.gif" title="ну я" />
 
+  <a id="song"></a>
   <p><i>Дайте Танк (!) - Впереди</i></p>
   <p>
     Всё нихуя не впереди, всё здесь и сейчас<br>
@@ -108,13 +112,27 @@
     Танце-танце-танцевать<br>
   </p>
 
+  <hr>
   <!--форма-->
   <form action="self.php">
     <p><input type="text"></p>
-    <p><input type="submit" disabled></p>
+    <p><input type="submit" <!--disabled--></p>
+  </form>
+  
+  <!-- скопированная форма номер 2-->
+  <form name="f1" method="get" action="enter_data.php">
+    <input name="link" type="hidden" value="index.php" />
+    Логин: <br />
+    <input name="login" type="text" size="25" maxlength="30" value="проман" /> <br />
+    Пароль: <br />
+    <input name="pd" type="password" size="25" maxlength="30" value="228" /> <br />
+    <input name="remember" type="checkbox" value="yes" /> Запомнить <br />
+    <input type="submit" name="enter" value="Вход" />
   </form>
 
+  <hr>
   <!--делаю рекурсию с помощью фреймов-->
+  <br>
   <iframe src="index.html" height="200" width="50%">
     <p>Извините, но ваш браузер не может отобразить содержимое фрейма, но
       вы можете сами перейти на <a href="index.html">страницу с новостями</a>.
