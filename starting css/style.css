@@ -1,5 +1,22 @@
-p {
-  color: #333;
+body{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
-/*комментарий*/
+p {
+  color: #333;
+  font-size: 22px;
+}
+
+UL LI UL { color: green; }
+UL UL { color: red; }
+LI SPAN { color: blue; }
+LI LI { color: fuchsia; }
+UL SPAN { color: orange; }
+
+.back {
+  background: url(img/pulled_the_eye_on.jpg);
+  background-size: cover;
+  /* background-size отвечает за размер картинки, cover - картинка растягивается на весь блок, сохраняя пропорции */
+}
