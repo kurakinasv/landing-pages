@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mogo</title>
@@ -17,7 +18,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="header active">
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">MoGo</div>
@@ -29,6 +30,10 @@
                     <a class="nav__link" href="#">Work</a>
                     <a class="nav__link" href="#">Contact</a>
                 </nav>
+
+                <button class="nav-toggle active" type="button">
+                    <span class="nav-toggle__item">Menu</span>
+                </button>
             </div>
         </div>
     </header>
@@ -51,19 +56,19 @@
                     <div class="slider__item active">
                         <!--используем span, чтобы был строчный элемент и слово не начиналось с новой строки-->
                         <span class="slider__num">01</span>
-                        Intro
+                        <span class="slider__text">Intro</span>
                     </div>
                     <div class="slider__item">
                         <span class="slider__num">02</span>
-                        Work
+                        <span class="slider__text">Work</span>
                     </div>
                     <div class="slider__item">
                         <span class="slider__num">03</span>
-                        About
+                        <span class="slider__text">About</span>
                     </div>
                     <div class="slider__item">
                         <span class="slider__num">04</span>
-                        Contacts
+                        <span class="slider__text">Contacts</span>
                     </div>
                 </div>
             </div>
@@ -159,7 +164,8 @@
 
             <!--верхний блок-->
             <div class="services">
-                <div class="services__item">
+                <!-- добавили еще один класс для первых трех блоков -->
+                <div class="services__item services__item--border">
                     <img class="services__icon" src="images/services/photography.png" alt="">
                     <div class="services__title">Photography</div>
                     <div class="services__text">
@@ -167,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="services__item">
+                <div class="services__item services__item--border">
                     <img class="services__icon" src="images/services/webdesign.png" alt="">
                     <div class="services__title">web design</div>
                     <div class="services__text">
@@ -175,18 +181,15 @@
                     </div>
                 </div>
 
-                <div class="services__item"><img class="services__icon" src="images/services/creativity.png" alt="">
+                <div class="services__item services__item--border"><img class="services__icon"
+                        src="images/services/creativity.png" alt="">
                     <div class="services__title">creativity</div>
                     <div class="services__text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                     </div>
                 </div>
-            </div>
 
-            <hr>
-
-            <!--нижний блок-->
-            <div class="services">
+                <!--нижний блок переместили из-за мобильной верстки-->
                 <div class="services__item">
                     <img class="services__icon" src="images/services/seo.png" alt="">
                     <div class="services__title">seo</div>
@@ -254,11 +257,12 @@
             <!--блок с картинкой и аккордионом-->
             <div class="wedo">
                 <div class="wedo__item">
-                    <img src="images/wedo.jpg" alt="">
+                    <img class="wedo__img" src="images/wedo.jpg" alt="">
                 </div>
-                <div class="wedo__item">
-                    <div class="accordion">
 
+                <div class="wedo__item">
+
+                    <div class="accordion">
                         <div class="accordion__item">
                             <div class="accordion__header">
                                 <img class="accordion__icon" src="images/services/photography.png" alt="">
@@ -455,22 +459,22 @@
 
             <div class="logos">
                 <div class="logos__item">
-                    <img src="images/logos/1.png" alt="">
+                    <img class="logos__img" src="images/logos/1.png" alt="">
                 </div>
                 <div class="logos__item">
-                    <img src="images/logos/2.png" alt="">
+                    <img class="logos__img" src="images/logos/2.png" alt="">
                 </div>
                 <div class="logos__item">
-                    <img src="images/logos/3.png" alt="">
+                    <img class="logos__img" src="images/logos/3.png" alt="">
                 </div>
                 <div class="logos__item">
-                    <img src="images/logos/4.png" alt="">
+                    <img class="logos__img" src="images/logos/4.png" alt="">
                 </div>
                 <div class="logos__item">
-                    <img src="images/logos/5.png" alt="">
+                    <img class="logos__img" src="images/logos/5.png" alt="">
                 </div>
                 <div class="logos__item">
-                    <img src="images/logos/6.png" alt="">
+                    <img class="logos__img" src="images/logos/6.png" alt="">
                 </div>
             </div>
 
@@ -598,7 +602,7 @@
             <div class="clients">
 
                 <div class="clients__item">
-                    <img class="clients__photo" src="http://placehold.it/110" alt="">
+                    <img class="clients__photo" src="/images/clients/1.png" alt="">
                     <div class="clients__name">Matthew Dix</div>
                     <div class="clients__prof">Graphic Design</div>
                     <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum
@@ -608,7 +612,7 @@
                 </div>
 
                 <div class="clients__item">
-                    <img class="clients__photo" src="http://placehold.it/110" alt="">
+                    <img class="clients__photo" src="/images/clients/2.png" alt="">
                     <div class="clients__name">Matthew Dix</div>
                     <div class="clients__prof">Graphic Design</div>
                     <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum
@@ -618,7 +622,7 @@
                 </div>
 
                 <div class="clients__item">
-                    <img class="clients__photo" src="http://placehold.it/110" alt="">
+                    <img class="clients__photo" src="/images/clients/3.png" alt="">
                     <div class="clients__name">Matthew Dix</div>
                     <div class="clients__prof">Graphic Design</div>
                     <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum
@@ -628,7 +632,7 @@
                 </div>
 
                 <div class="clients__item">
-                    <img class="clients__photo" src="http://placehold.it/110" alt="">
+                    <img class="clients__photo" src="/images/clients/4.png" alt="">
                     <div class="clients__name">Matthew Dix</div>
                     <div class="clients__prof">Graphic Design</div>
                     <div class="clients__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum
