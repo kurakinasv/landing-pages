@@ -41,3 +41,18 @@ document.querySelectorAll("[data-scroll]").forEach((item) => {
         });
     });
 });
+
+//+ Menu nav-toggle
+
+let navToggle = document.getElementById("nav-toggle");
+
+navToggle.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    let target = event.target;
+
+    if (target.tagName == "SPAN" || target.tagName == "BUTTON") {
+        navToggle.classList.toggle("active");
+    }
+    nav.classList.toggle("active");
+});
