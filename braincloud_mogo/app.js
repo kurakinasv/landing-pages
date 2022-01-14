@@ -56,3 +56,15 @@ navToggle.addEventListener("click", function (event) {
     }
     nav.classList.toggle("active");
 });
+
+//+ Collapse
+
+document.querySelectorAll("[data-collapse]").forEach((item) => {
+    item.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        let target = event.currentTarget;
+
+        target.classList.toggle("active");
+    });
+});

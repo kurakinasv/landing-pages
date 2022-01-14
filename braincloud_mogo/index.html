@@ -284,12 +284,12 @@
                     <div class="wedo__item">
 
                         <div class="accordion">
-                            <div class="accordion__item">
+                            <div class="accordion__item" data-collapse="#wedo_1">
                                 <div class="accordion__header">
                                     <img class="accordion__icon" src="images/services/photography.png" alt="">
                                     <div class="accordion__title">photography</div>
                                 </div>
-                                <div class="accordion__content">
+                                <div class="accordion__content" id="wedo_1">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum vitae
                                         nibh
                                         eleifend accumsan. Etiam aliquam suscipit eros ut accumsan. Nam id mollis neque,
@@ -303,12 +303,12 @@
                             </div>
 
                             <!--для показа контента в аккордионе-->
-                            <div class="accordion__item active">
+                            <div class="accordion__item active" data-collapse="#wedo_2">
                                 <div class="accordion__header">
                                     <img class="accordion__icon" src="images/services/creativity.png" alt="">
                                     <div class="accordion__title">creativity</div>
                                 </div>
-                                <div class="accordion__content">
+                                <div class="accordion__content" id="wedo_2">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum vitae
                                         nibh
                                         eleifend accumsan. Etiam aliquam suscipit eros ut accumsan. Nam id mollis neque,
@@ -321,12 +321,12 @@
                                 </div>
                             </div>
 
-                            <div class="accordion__item">
+                            <div class="accordion__item" data-collapse="#wedo_3">
                                 <div class="accordion__header">
                                     <img class="accordion__icon" src="images/services/webdesign.png" alt="">
                                     <div class="accordion__title">web design</div>
                                 </div>
-                                <div class="accordion__content">
+                                <div class="accordion__content" id="wedo_3">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum vitae
                                         nibh
                                         eleifend accumsan. Etiam aliquam suscipit eros ut accumsan. Nam id mollis neque,
@@ -359,7 +359,17 @@
                     <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
                     <a class="reviews__btn reviews__btn--next" href="#">Next</a>
 
-                    <div class="reviews__item">
+                    <div class="reviews__item active" data-slider="#slider_1">
+                        <img class="reviews__photo" src="images/avatar.png" alt="">
+                        <div class="reviews__text">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum vitae nibh
+                            eleifend accumsan. Etiam aliquam suscipit eros ut accumsan. Nam id mollis neque, sit
+                            amet cursus dolor. Nam lorem dui, laoreet sit amet fermentum vel."
+                        </div>
+                        <div class="reviews__author">Jon Doe</div>
+                    </div>
+
+                    <div class="reviews__item" data-slider="#slider_2">
                         <img class="reviews__photo" src="images/avatar.png" alt="">
                         <div class="reviews__text">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in ipsum vitae nibh

@@ -718,6 +718,7 @@ hr {
     margin-bottom: 10px;
     /*разделяем блоки аккордиона*/
     border: 1px solid #e5e5e5;
+
 }
 
 .accordion__item.active
@@ -725,6 +726,7 @@ hr {
 /*если активный блок, показываем*/
 .accordion__content {
     display: block;
+
 }
 
 .accordion__item.active .accordion__header {
@@ -737,11 +739,10 @@ hr {
 
 /*у active псевдоэлемент after у блока header меняется отображение*/
 .accordion__header:after {
-    transform: translateY(-50%)
-        /*подровнять по центру*/
-        rotate(-45deg);
-    margin-top: 5px;
+    /*подровнять по центру*/
+    transform: translateY(-50%) rotate(-45deg);
     /*чтобы было по центру (из-за иллюзии восприятия)*/
+    margin-top: 5px;
 }
 
 .accordion__header {
@@ -789,13 +790,14 @@ hr {
 
 .accordion__content {
     padding: 15px 20px;
-    display: none;
     /*блок пока скрыт*/
+    display: none;
 
     color: #999;
     font-size: 15px;
     font-style: italic;
     font-weight: 300;
+
 }
 
 .accordion__title {
@@ -814,8 +816,13 @@ hr {
 
 .reviews__item {
     padding-left: 255px;
-    position: relative;
     /*чтобы фото позиционировалось отн-но этого блока*/
+    position: relative;
+    display: none;
+}
+
+.reviews__item.active {
+    display: block;
 }
 
 .reviews__photo {
