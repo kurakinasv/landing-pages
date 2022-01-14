@@ -68,3 +68,49 @@ document.querySelectorAll("[data-collapse]").forEach((item) => {
         target.classList.toggle("active");
     });
 });
+
+//+ Slider
+
+// некрасиво и возможны баги, но работает
+
+let sliderNum = 0;
+let slider1 = document.querySelectorAll("[data-slider1]");
+let slider2 = document.querySelectorAll("[data-slider2]");
+
+let sliderOffset_1 = slider1[0].parentNode.offsetTop;
+let sliderOffset_2 = slider2[0].parentNode.offsetTop;
+let sliderHeight = slider1[0].parentNode.clientHeight;
+
+document.querySelectorAll(".reviews__btn").forEach((item) => {
+    item.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        let currSlider;
+
+        if (sliderOffset_1 + sliderHeight >= event.pageY) {
+            currSlider = slider1;
+        } else {
+            currSlider = slider2;
+        }
+
+        sliderToggle(currSlider, item);
+    });
+});
+
+function sliderToggle(slider, item) {
+    let sliderLength = slider.length;
+
+    slider[sliderNum].classList.remove("active");
+
+    if (item.classList.contains("reviews__btn--prev")) {
+        sliderNum = sliderNum - 1;
+        if (sliderNum == -1) sliderNum = sliderLength - 1;
+
+        slider[sliderNum].classList.add("active");
+    } else {
+        sliderNum = sliderNum + 1;
+        if (sliderNum == sliderLength) sliderNum = 0;
+
+        slider[sliderNum].classList.add("active");
+    }
+}
