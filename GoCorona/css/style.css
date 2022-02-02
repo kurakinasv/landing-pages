@@ -44,16 +44,23 @@ body {
     color: #616161;
 
     --blue: #4285F4;
+    --blue-h: #3675db;
     --red: #EC5863;
+    --red-h: #e0444f;
     --light-grey: #B0B0B0;
-
+    --white: #FCFDFE;
 }
 
 .wrapper {
-    max-width: 1152px;
-    margin: 0px auto;
-    padding-top: 37px;
-    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1057px;
+    margin: 0 auto;
 }
 
 .red {
@@ -72,13 +79,20 @@ body {
 /*+ Header */
 
 .header {
-    max-width: 1050px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
 
-.logo {
+.header__container {
+    display: flex;
+    min-height: 114px;
+    align-items: center;
+}
+
+.header__logo {
     display: flex;
     align-items: center;
 }
@@ -93,46 +107,69 @@ body {
     color: black;
 }
 
-.header__left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 260px;
+.header__nav {
+    flex: 1 1 auto;
 }
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 0 40px 0 0;
+}
+
+.nav__list {
+    display: flex;
 }
 
 .nav__item {
-    padding: 0 20px;
+    margin-right: 40px;
+}
 
+.nav__link {
     font-family: Raleway;
     font-size: 10px;
     font-weight: 700;
-    line-height: 12px;
+    line-height: 1.2;
     letter-spacing: 0.14em;
     text-align: left;
     color: black;
     text-transform: uppercase;
 }
 
-.download button {
-    display: block;
+.header__button {
+    display: flex;
+    flex: 0 0 252px;
+    justify-content: flex-end;
+}
+
+.button {
+    display: inline-block;
     padding: 14px 30px;
 
     font-family: Raleway;
     font-size: 10px;
     font-weight: 800;
-    line-height: 12px;
+    line-height: 1.2;
     letter-spacing: 0.14em;
     text-align: left;
-    color: white;
     text-transform: uppercase;
+    color: var(--white);
 
     border-radius: 5px;
+    background-color: var(--red);
+    transition: background-color 0.3s ease 0s;
+}
+
+.button:hover {
+    background-color: var(--red-h);
+}
+
+.button__blue {
     background-color: var(--blue);
+}
+
+.button__blue:hover {
+    background-color: var(--blue-h);
 }
 
 
